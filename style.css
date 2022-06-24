@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+/*mixins*/
+/*basic styles*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #303633;
+  line-height: 1.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.headings {
+  font-size: 2.5rem;
+}
+
+.headings::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 80px;
+  background: #616161;
+  margin: 20px 0 30px 0;
+}
+
+/*aside*/
+aside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 54, 51, 0.9)), to(rgba(156, 122, 151, 0.9))), url(img/services.jpg);
+  background-image: linear-gradient(rgba(48, 54, 51, 0.9), rgba(156, 122, 151, 0.9)), url(img/services.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+  padding-right: 60px;
+}
+
+@media (max-width: 768px) {
+  aside {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding-right: 0px;
+    height: 90vh;
+  }
+}
+
+aside img {
+  width: 40%;
+  border-radius: 50%;
+  border: 5px solid #a08c9d;
+}
+
+aside h1 {
+  color: #fff;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+aside h1 span {
+  color: #fff;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+aside a {
+  color: #fff;
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+aside a:hover {
+  color: #303633;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+/*main*/
+main {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 40px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+@media (max-width: 768px) {
+  main {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    overflow: auto;
+  }
+}
+
+main .about button {
+  padding: 10px 40px;
+  border: 2px solid #616161;
+  color: #303633;
+  background: transparent;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+main .about button:hover {
+  background: #c6c5c5;
+  border: 2px solid #c6c5c5;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .about::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #f2f2f2;
+  margin: 50px 0 30px 0;
+}
+
+main .portfolio .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .portfolio .wrapper .project {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  main .portfolio .wrapper .project {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+main .portfolio .wrapper .project img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+main .portfolio .wrapper .project img:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  scale: 1.1;
+}
+
+main .portfolio .wrapper .project a {
+  color: #303633;
+  font-size: 1.5rem;
+}
+
+main .portfolio .wrapper .project a:hover {
+  color: #a08c9d;
+}
+
+main .portfolio button {
+  padding: 10px 40px;
+  border: 2px solid #616161;
+  color: #303633;
+  background: transparent;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+main .portfolio button:hover {
+  background: #c6c5c5;
+  border: 2px solid #c6c5c5;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+main .portfolio::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #f2f2f2;
+  margin: 50px 0 30px 0;
+}
+
+main .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .skills article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+main .skills h2 {
+  padding-bottom: 30px;
+}
+
+main .skills::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #f2f2f2;
+  margin: 50px 0 30px 0;
+}
+
+main footer {
+  padding-bottom: 40px;
+}
+
+main footer .contact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main footer .contact ul {
+  list-style: none;
+  line-height: 2.5;
+  padding-top: 50px;
+}
+
+main footer .contact ul li i {
+  color: #a08c9d;
+}
+/*# sourceMappingURL=style.css.map */
